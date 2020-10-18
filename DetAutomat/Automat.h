@@ -52,4 +52,4 @@ public:
 };
 
 vector < string > Split(string s, char sep);
-string removeS(string s);
+void removeS(string& s);
