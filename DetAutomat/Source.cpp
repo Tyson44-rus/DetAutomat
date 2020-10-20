@@ -72,17 +72,11 @@ int main()
                     file.close();
                     t.Check();
                     vector < string > buf;
-                    cout << "¬ведите символы: ";
+                    cout << "¬ведите символы через пробел: ";
                     cin.get();
                     getline(cin, s);
-                    removeS(s);
-                    for (auto str : s) {
-                        string temp;
-                        temp.push_back(str);
-                        buf.push_back(temp);
-                    }
-                    set < string > sBuf(buf.begin(), buf.end());
-                    for (auto a : sBuf) {
+                    buf = Split(s, ' ');
+                    for (auto a : buf) {
                         bool Check = false;
                         for (auto b : t.Alphabet_) {
                             if (a == b)
